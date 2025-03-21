@@ -1,0 +1,175 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: "Raleway", sans-serif;
+}
+
+.slider{
+    min-height: 80vh;
+    width: 100%;
+    aspect-ratio: 16/9;
+    background: #000;
+    position: relative;
+}
+
+.sl-bckg{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    filter: brightness(30%);
+}
+
+.sl-cnt{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+}
+
+h1{
+    color: #FFF;
+    font-size: 5rem;
+}
+h2{
+    font-size: 3rem;
+    margin-bottom: 100px;
+}
+
+p{
+    font-size: 1.5rem;
+    line-height: 1.5em;
+}
+
+.section{
+    padding: 100px;
+}
+
+.dark{
+    background: #000;
+    color: #FFF;
+}
+
+.boxed{
+    max-width: 1280px;
+    margin-inline: auto;
+}
+
+.text-center{
+    text-align: center;
+}
+
+.flex{
+    display: flex;
+}
+
+w25{
+    width : 25%;
+}
+
+w32{
+    width: 32%;
+}
+
+.w40{
+    width: 40%;
+}
+
+.w60{
+    width: 60%;
+}
+
+.gap20{
+    gap: 20px;
+}
+
+.space-between{
+    justify-content: space-between;
+} 
+
+.wrap{
+    flex-wrap: wrap;
+}
+
+.skill{
+    background: #fff;
+    border-radius: 15px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.skill img{
+    width: 100px;
+    height: 100px;
+    aspect-ratio: 1/1;
+    object-fit: contain;
+
+}
+
+.skill h3{
+    margin-top: 10px;
+    color: #000;
+}
+
+.realisation{
+    height: auto;
+    aspect-ratio: 1/1;
+    position: relative;
+}
+
+.realisation h3{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2rem;
+    width: max-content;
+    opacity: 0;
+}
+
+.realisation a{
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    color: #FFF;
+}
+
+.realisation img{
+    object-fit: cover;
+    height: 100%;
+    width:  100%;
+    filter: brightness(40%);
+    transition: 0.5s ease;
+}
+
+.realisation:hover img{
+    filter: brightness(65%);
+}
+.realisation:hover h3{
+    opacity: 1;
+}
+
+.icon{
+    display: block;
+    font-size: 1.5rem;
+}
+
+.label{
+    display: block;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin: 10px 0;
+    font-size: 1.5rem;
+}
+
+.value{
+    display: block;
+    font-size: 1.2rem;
+}
