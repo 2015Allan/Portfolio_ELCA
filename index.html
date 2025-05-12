@@ -8,6 +8,104 @@
     <title>Mon Portfolio</title>
 </head>
 <body>
+
+   <header>
+    <div class="logo">
+        <a href="#" class="logo-link"><span>Allan</span> EKOMIE</a>
+    </div>
+    <nav class="nav-menu">
+        <ul class="menu">
+            <li><a href="#" class="menu-link">Accueil</a></li>
+            <li><a href="#section_ap" class="menu-link">À Propos</a></li>
+            <li><a href="#competence" class="menu-link">Compétences</a></li>
+            <li><a href="#projets" class="menu-link">Projets</a></li>
+            <li><a href="#VT" class="menu-link">Veille Technologique</a></li>
+            <li><a href="#contact" class="menu-link">Contact</a></li>
+        </ul>
+    </nav>
+    <div class="hamburger" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+</header>
+
+<script>
+function toggleMenu() {
+    const menu = document.querySelector('.menu');
+    menu.classList.toggle('active');
+}
+</script>
+
+<style>
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #333;
+    color: #fff;
+}
+
+.logo-link {
+    color: #fff;
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.nav-menu .menu {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+.menu-link {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.menu-link:hover {
+    color: #e67e22;
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+}
+
+.hamburger span {
+    width: 30px;
+    height: 4px;
+    background: #fff;
+    display: block;
+    border-radius: 2px;
+}
+
+@media (max-width: 768px) {
+    .nav-menu .menu {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        background: #333;
+        padding: 20px;
+        border-radius: 8px;
+    }
+    .nav-menu .menu.active {
+        display: flex;
+    }
+    .hamburger {
+        display: flex;
+    }
+}
+</style>
+
     
     <div class="slider">
         <img src="img/app.jpg" class="sl-bckg">
@@ -17,100 +115,265 @@
         </div>
     </div>
 
-    <div class="section">
-        <div class="boxed">
-            <div class="flex">
-                <div class="w40">
-                    <h2>A Propos de Moi</h2>
-                </div>
-            
-                <div class="w60">
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Non, sed! Eum illum amet doloremque officiis quisquam expedita deleniti inventore est? Ratione quam voluptatem est molestias iusto recusandae harum dolore sapiente?</p>
-                </div>
+
+    <!-- Section A propos -->
+     <section id="section_ap">
+        <div class="section_ap">
+    <h2>A PROPOS 💬</h2>
+    <div class="Presentation">
+        <p>Bonjour, je m'appelle <strong>Allan EKOMIE</strong> 👋. Actuellement en deuxième année de <strong>BTS SIO</strong> (Services Informatiques aux Organisations) option <strong>SLAM 💻</strong> à l'école IRIS. 
+        Ce portfolio vous offre un aperçu de mon parcours scolaire, de mes expériences professionnelles et des projets réalisés durant ces deux années de formation. 
+        Il témoigne de mon engagement et de mes compétences dans les domaines du développement logiciel et des technologies de l'information.</p>
+        <p>📄 <a href="CV_Alternance_Allan_EKOMIE.pdf" target="_blank" class="btn-cv">Télécharger mon CV</a></p>
+    </div>
+
+    <div class="BTS">
+        <h3>Qu'est-ce que le BTS SIO 🎓 ?</h3>
+        <p>Le <strong>Brevet de Technicien Supérieur aux Services Informatiques aux Organisations (BTS SIO)</strong> est un diplôme Bac+2 qui forme des professionnels capables de travailler dans les domaines du développement d'applications ou de l'administration des réseaux informatiques. Cette formation permet soit d'intégrer directement le marché du travail, soit de poursuivre des études supérieures dans le domaine de l'informatique.</p>
+
+        <h4>Le BTS SIO propose deux spécialités :</h4>
+        <div class="options">
+            <div class="option">
+                <h4>📡 Option SISR</h4>
+                <p>L'option <strong>Solutions d'Infrastructure, Systèmes et Réseaux</strong> forme des spécialistes en administration des réseaux et des systèmes informatiques, ainsi qu'en sécurité des infrastructures.</p>
+            </div>
+            <div class="option">
+                <h4>💻 Option SLAM <span style="color: #e67e22;">👉 (la filière que j'ai choisie)</span></h4>
+                <p>L'option <strong>Solutions Logicielles et Applications Métiers</strong> est orientée développement logiciel : conception, développement, déploiement et maintenance des applications répondant aux besoins des entreprises.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="parcours_sco">
+        <h3>PARCOURS SCOLAIRE 📚</h3>
+        <p>🎓 Obtention du <strong>BTS SIO option SLAM</strong> en 2025</p>
+        <p>🎓 Obtention du <strong>Baccalauréat C</strong> (option Mathématiques et Sciences Physiques) en 2022 au Lycée Sainte Marie (Libreville, Gabon)</p>
+    </div>
+
+    <div class="exp_pro">
+        <h3>EXPERIENCES PROFESSIONNELLES 💼</h3>
+        <p>📅 Stage de 5 semaines en 2ème année chez <strong>Wisetech-ENG</strong> (Novembre - Décembre 2024)</p>
+        <p>📅 Stage de 5 semaines en 1ère année chez <strong>Mambo Inchaud Conception</strong> (Mai - Juin 2024)</p>
+    </div>
+     </section>
+    
+
+    <!-- Section Mes Compétences -->
+     <section id="competence">
+        <div class="competence">
+        <h3>MES COMPÉTENCES 🚀</h3>
+
+        <h4>Langages de Programmation 💻</h4>
+        <div class="flex gap20 wrap">
+            <div class="w25 skill">
+                <img src="img/logo-html.png" alt="">
+                <h3>HTML</h3>
+            </div>
+            <div class="w25 skill">
+                <img src="img/logo-css.png" alt="">
+                <h3>CSS</h3>
+            </div>
+            <div class="w25 skill">
+                <img src="img/logo-php.png" alt="">
+                <h3>PHP</h3>
+            </div>
+            <div class="w25 skill">
+                <img src="img/logo-java.png" alt="">
+                <h3>Java</h3>
+            </div>
+            <div class="w25 skill">
+                <img src="img/logo-js.png" alt="">
+                <h3>Javascript</h3>
+            </div>
+            <div class="w25 skill">
+                <img src="img/logo-python.png" alt="">
+                <h3>Python</h3>
             </div>
         </div>
 
-        
-    </div>
+        <h4>Logiciels 🛠️</h4>
+        <div class="flex gap20 wrap">
+            <div class="w25 skill">
+                <img src="img/logo-wordpress.png" alt="">
+                <h3>WordPress</h3>
+            </div>
+            <div class="w25 skill">
+                <img src="img/logo-vmware.png" alt="">
+                <h3>VmWare Worksation</h3>
+            </div>
+            <div class="w25 skill">
+                <img src="img/logo-cisco.png" alt="">
+                <h3>Cisco Packet Tracer</h3>
+            </div>
+            <div class="w25 skill">
+                <img src="img/logo-vscode.png" alt="">
+                <h3>Visual Studio Code</h3>
+            </div>
+            <div class="w25 skill">
+                <img src="img/logo-eclipse.jpg" alt="">
+                <h3>Eclipse</h3>
+            </div>
+        </div>
 
-    <div class="section dark">
-        <div class="boxed text-center">
-            <h2>Découvrez mes compétences</h2>
-            <div class="flex gap20">
+        <h4>Réseaux & Administration Web 🌐</h4>
+        <div class="flex gap20 wrap">
+            <div class="w25 skill">
+                <img src="img/logo-debian.jpg" alt="">
+                <h3>Debian</h3>
+            </div>
+            <div class="w25 skill">
+                <img src="img/logo-linux.jpeg" alt="">
+                <h3>Linux</h3>
+            </div>
+            <div class="w25 skill">
+                <img src="img/logo-ubuntu.png" alt="">
+                <h3>Ubuntu</h3>
+            </div>
+            <div class="w25 skill">
+                <img src="img/logo-apache.svg" alt="">
+                <h3>Apache</h3>
+            </div>
+        </div>
+    </div>
+</div>
+     </section>
+    
+
+
+    <!-- Section Mes Projets -->
+     <section id="projets">
+        <div class="projets">
+            <h2>MES PROJETS</h2>
+
+    <!-- Projets en Milieu Scolaire -->
+            <h3>Projets Réalisés en Milieu Scolaire</h3>
+            <div class="flex gap20 wrap">
                 <div class="w25 skill">
-                    <img src="img/logo-html.png" alt="">
-                    <h3>HTML</h3>
+                    <img src="img/proj_calc.png" alt="Calculatrice">
+                    <h3>Calculatrice en Java</h3>
+                     <a href="projets.html#calculatrice" class="btn-more">Voir plus</a>
                 </div>
-                    <div class="w25 skill">
-                        <img src="img/logo-css.png" alt="">
-                        <h3>CSS</h3>
-                    </div>
-                    <div class="w25 skill">
-                        <img src="img/logo-php.png" alt="">
-                        <h3>PHP</h3>
-                    </div>
-                    <div class="w25 skill">
-                            <img src="img/logo-java.png" alt="">
-                            <h3>JAVA</h3>
-                    </div>
 
+            <div class="w25 skill">
+                <img src="img/logo-owncloud.png" alt="Mise en place GLPI">
+                <h3>Production Owncloud</h3>
+                <a href="projets.html#calculatrice" class="btn-more">Voir plus</a>
+            </div>
+            <div class="w25 skill">
+                <img src="img/proj_alume.png" alt="Site ALUME">
+                <h3>Site web ALUME</h3>
+                <a href="projets.html#calculatrice" class="btn-more">Voir plus</a>
+            </div> 
             </div>
 
-        </div>
-    </div>
+    <!-- Projets en Milieu Professionnel -->
+    <h3>Projets Réalisés en Milieu Professionnel</h3>
 
-    <div class="section">
-        <div class="boxed text-center">
-            <h2>Mes réalisations</h2>
-            <div class="flex wrap gap20 space-between">
-                <div class="w32 realisation">
-                    <a href="#">
-                        <img src="img/examp-projet.png" alt="">
-                    </a>
-                </div>
-                <div class="w32 realisation">
-                    <a href="#">
-                        <img src="img/examp-projet.png" alt="">
-                    </a>
-                </div>
-                <div class="w32 realisation">
-                    <a href="#">
-                        <img src="img/examp-projet.png" alt="">
-                    </a>
-                </div>
-                <div class="w32 realisation">
-                    <a href="#">
-                        <img src="img/examp-projet.png" alt="">
-                    </a>
-                </div>
-                <div class="w32 realisation">
-                    <a href="#">
-                        <img src="img/examp-projet.png" alt="">
-                    </a>
-                </div>
-                <div class="w32 realisation">
-                    <a href="#">
-                        <img src="img/examp-projet.png" alt="">
-                    </a>
-                </div>
-            </div>
+    <div class="flex gap20 wrap">
+        <div class="w25 skill">
+            <img src="img/proj_sitestage.png" alt="Site AirTravel">
+            <h3>Site web AirTravel</h3>
+            <a href="projets.html#calculatrice" class="btn-more">Voir plus</a>
+        </div>
+        <div class="w25 skill">
+            <img src="img/wisetech.png" alt="Site AirTravel">
+            <h3>Site web Wisetech-ENG</h3>
+            <a href="projets.html#calculatrice" class="btn-more">Voir plus</a>
+        </div>
         </div>
     </div>
+</div>
 
-    <div class="section dark">
-        <div class="boxed text-center">
-            <h2>CONTACTEZ MOI</h2>
-            <div class="flex space-between">
-                <div class="w32">
-                    <span class="material-symbols-outlined"> mail</span>
-                    <span class="label">E-mail</span>
-                    <span class="value">test@test.com</span>
-                </div>
-            </div>
+     </section>
+     
+     
+    <!-- Section Veille technologique -->
+     <section id="VT">
+        <div class="VT">
+    <h2>Veille Technologique</h2>
+    <h4>La veille technologique, c'est quoi ?</h4>
+    <p>La veille technologique est un processus d'identification et d'analyse des innovations dans un secteur donné. Elle permet de rester compétitif, d'anticiper les évolutions du marché et de saisir de nouvelles opportunités.</p>
+
+    <h4>Le sujet de ma veille technologique</h4>
+    <p>Le thème que j'ai choisi est : <strong>« L'avancement des villes intelligentes avec la progression de l'IoT »</strong>.</p>
+
+    <h3>Articles & Sources</h3>
+    <div class="articles-container">
+        <div class="article-card">
+            <img src="img/5g.jpg" alt="5G et Smart Cities">
+            <h3>Le rôle de la 5G dans les Smart Cities</h3>
+            <p>Découvrez comment la 5G permet de déployer des infrastructures plus rapides et stables, facilitant le déploiement des solutions IoT à grande échelle dans les villes intelligentes.</p>
+            <a href="https://rubiestech.org/blog/the-role-of-5g-in-advancing-smart-cities%EF%BF%BC/" target="_blank">Lire l'article</a>
+        </div>
+
+        <div class="article-card">
+            <img src="img/Iot_security.jpg" alt="Sécurité IoT">
+            <h3>Défis de sécurité dans les Smart Cities</h3>
+            <p>Analyse des problématiques de cybersécurité liées à l'intégration massive de l'IoT dans les infrastructures urbaines modernes.</p>
+            <a href="https://www.requea.com/securite-iot.html" target="_blank">Lire l'article</a>
+        </div>
+
+        <div class="article-card">
+            <img src="img/smrtct.png" alt="Transformation des villes">
+            <h3>Comment l'IoT transforme les villes</h3>
+            <p>Un aperçu des projets IoT en cours en 2024 pour améliorer la mobilité, l'énergie et la qualité de vie des citoyens.</p>
+            <a href="https://mapsted.com/blog/how-iot-solutions-are-transforming-smart-cities" target="_blank">Lire l'article</a>
+        </div>
+
+        <div class="article-card">
+            <img src="img/sust_IoT.png" alt="IoT et durabilité">
+            <h3>Durabilité et IoT</h3>
+            <p>Découvrez comment les technologies IoT contribuent à réduire l'empreinte carbone des villes à travers des solutions de transport intelligent et de gestion des ressources.</p>
+            <a href="https://www.synox.io/cat-smart-transport/ecoconduite-economie-technologie-smart-cities/" target="_blank">Lire l'article</a>
+        </div>
+        <div class="article-card">
+            <img src="img/aqara.jpg" alt="IoT et durabilité">
+            <h3>CES 2025 : Aqara lance des panneaux de controle</h3>
+            <p>Découvrez comment les technologies IoT contribuent à réduire l'empreinte carbone des villes à travers des solutions de transport intelligent et de gestion des ressources.</p>
+            <a href="https://domotique-news.com/ces-2025-aqara-lance-des-panneaux-de-controle/" target="_blank">Lire l'article</a>
+        </div>
+        <div class="article-card">
+            <img src="img/home.jpg" alt="IoT et durabilité">
+            <h3>Domotique: un marché de 73,5 milliards pour 2029</h3>
+            <p>Découvrez comment les technologies IoT contribuent à réduire l'empreinte carbone des villes à travers des solutions de transport intelligent et de gestion des ressources.</p>
+            <a href="https://domotique-news.com/domotique-un-marche-de-735-milliards-pour-2029/" target="_blank">Lire l'article</a>
         </div>
     </div>
-    
-    
+</div>
+
+
+     </section>
+     
+    <!-- Section Contact -->
+    <section id="contact">
+		<h2 class="title">Contact</h2>
+		<form action="">
+			<div class="left-right">
+				<div class="left">
+				<label>Nom Complet</label>
+				<input type="text">
+				<label>Objet</label>
+				<input type="text">
+				<label>Email</label>
+				<input type="text">
+				<label>Message</label>
+				<textarea name="" id="" cols="" rows=""></textarea>
+			</div>
+			<div class="right">
+				<label>Numéro</label>
+				<input type="text">
+				<label>Date</label>
+				<input type="text">
+				<label>Autres Details</label>
+				<input type="text">
+				<label>Adresse</label>
+				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2623.5973431556117!2d2.2933554!3d48.8849521!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66f91aa85bfb1%3A0xca6c403c8e457b76!2sIRIS%20-%20%C3%89cole%20sup%C3%A9rieure%20d&#39;informatique!5e0!3m2!1sfr!2sfr!4v1704381412139!5m2!1sfr!2sfr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+			</div>
+			</div>
+			<button>Envoyer</button>
+		</form>
+	</section>
+
 </body>
 <script src="js/app.js">
 
